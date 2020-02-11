@@ -1,3 +1,6 @@
 //JS FUNCTIONS GO HERE//
+var myname="?"
 
-alert("yo!");
+//alert("heyo!");
+
+console.log("what are you looking for" + "?")

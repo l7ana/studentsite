@@ -1,36 +1,39 @@
-/* #BASE CSS (Initital Setup)
+/* CSS TABLE OF CONTENTS
 ---------------------------------
-    #BASE CONTENT
-        #TYPOGRAPHY
-            #BODY
-            #HEADINGS
-            #PARAGRAPHS
-            #LINKS
-            #HELPERS
+#GLOBALS
+     #RESET
+     #COLORS
+     #TYPOGRAPHY
+        #BODY
+        #HEADINGS
+        #PARAGRAPHS
+        #LINKS
+        #LISTS
+        #BLOCK QUPTES
+        #HELPERS
         #MEDIA
-            #IMAGES
-        #COMPONENTS
+            #IMAGES (Responsive)
+        #COMPONENTS/UI ELEMENTS
             #BUTTONS
-    #BASE LAYOUT
-        #MEDIAQUERIES
-        #CONTAINER
-        #GRID SYSTEM
-            #CLEARFIX
-    #BASE SITE
-        #SITE STRUCTURE
-            #HEADER
-                #SITE-BRANDING (LOGO)
-            #FOOTER
-            #SECTIONS
-            #SUB PAGES
-        #SITE NAVIGATION
-            #TOGGLE-NAV (Default for Small Screens)
+#BASE LAYOUT
+    #CONTAINER
+     #MEDIAQUERIES
+     #CONTAINER
+     #GRID SYSTEM
+        
+#BASE SITE
+     #SITE HEADER
+        #Site ID
+     #SITE MAIN
+     #SITE FOOTER
+     #SITE NAVIGATION
+    #SECTIONS
+    #SUB PAGES
 --------------------------------- */
 
-/* BASE START */
-
-/* HTML5 */
-
+/*GLOBAL RESET*/
+body { margin: 0;}
+* {box-sizing: border-box;}
 header, footer, aside, nav, main, figure, section, article {
     display: block;
 }

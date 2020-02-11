@@ -1,0 +1,170 @@
+/* #BASE CSS (Initital Setup)
+---------------------------------
+    #BASE CONTENT
+        #TYPOGRAPHY
+            #BODY
+            #HEADINGS
+            #PARAGRAPHS
+            #LINKS
+            #HELPERS
+        #MEDIA
+            #IMAGES
+        #COMPONENTS
+            #BUTTONS
+    #BASE LAYOUT
+        #MEDIAQUERIES
+        #CONTAINER
+        #GRID SYSTEM
+            #CLEARFIX
+    #BASE SITE
+        #SITE STRUCTURE
+            #HEADER
+                #SITE-BRANDING (LOGO)
+            #FOOTER
+            #SECTIONS
+            #SUB PAGES
+        #SITE NAVIGATION
+            #TOGGLE-NAV (Default for Small Screens)
+--------------------------------- */
+/* #TYPOGRAPHY  */
+/* Reference
+	62.5%  => 10px
+	68.8%  => 11px
+	75%    => 12px
+	81.3%  => 13px
+	87.5%  => 14px
+	100%   => 16px
+	112.5% => 18px
+	125%   => 20px
+*/
+
+/* BASE START */
+
+/* HTML5 */
+
+header, footer, aside, nav, main, figure, section, article {
+    display: block;
+}
+
+/* BASE CONTENT */
+
+/* BASE TYPOGRAPHY */
+
+/* BODY */
+body {
+    background:rgb(235, 235, 235);
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(53, 53, 53);
+    font-size: 87.5%; /*14px is 87.5% of 16px (100%)*/
+    line-height: 1.5em;
+}
+
+/* HEADINGS */
+h1, h2, h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0.5em 0;
+}
+
+h1 {
+    font-size: 3em;
+    line-height: 1em;
+}
+
+h2 {
+    font-size: 2.25em;
+    line-height: 1em;
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.2em;
+}
+
+/* PARAGRAPHS */
+p {
+    margin: 0 0 0.5em 0;
+    max-width: 35em;
+}
+
+/* LINKS */
+a{
+    color: #036;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #003;
+}
+
+/* BLOCKQUOTES */
+blockquote {
+    font-size: 1em;
+    margin: 0.5 0;
+    padding: 1.5em;
+}
+
+blockquote cite {
+    display: block;
+    font-size: .875em;
+    opacity: .8;
+}
+
+blockquote cite:before {
+    content: '\2014';
+    margin-right: .5em;
+}
+
+/* HELPERS */
+
+.textcenter {
+    text-align: center;
+    max-width: none;
+}
+
+/* MEDIA */
+/* IMAGES */
+
+img.scale-with-grid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* COMPONENTS */
+/* BUTTONS */
+
+button {
+    font-size: inherit;
+}
+
+a.button,
+button {
+    display: inline-block;
+    background: #036;
+    border: 1px solid #036;
+    color: white;
+    padding: 1em;
+    border-radius: .35em;
+    line-height: 1em;
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+a.button:hover, button:hover {
+    background-color: #003;
+    text-decoration: none;
+    border: 1px solid #003;
+}
+
+a.buttonalt {
+    background: none;
+    color: #036;
+    padding: 1em;
+    border: 1px solid #036;
+    border-radius: .35em;
+}
+
+a.buttonalt:hover {
+    background: #036;
+    color: white;
+    text-decoration: none;
+}

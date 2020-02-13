@@ -55,7 +55,6 @@ body {
     background:rgb(235, 235, 235);
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(53, 53, 53);
-    font-size: 87.5%; /*14px is 87.5% of 16px (100%)*/
     line-height: 1.5em;
 }
 

@@ -53,29 +53,45 @@ header, footer, aside, nav, main, figure, section, article {
 /* BODY */
 body {
     background:rgb(235, 235, 235);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 100%; /*this sets 1em = 16px*/
     color: rgb(53, 53, 53);
-    line-height: 1.5em;
+    line-height: 1.6;
 }
 
 /* HEADINGS */
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0.5em 0;
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 3em; /*Based on 16px, this is 48px*/
     line-height: 1em;
 }
 
 h2 {
-    font-size: 2.25em;
+    font-size: 2.25em; /*Based on 16px, this is 36px*/
     line-height: 1em;
 }
 
 h3 {
-    font-size: 1.5em;
+    font-size: 1.5em; /*Based on 16px, this is 24px*/
+    line-height: 1.2em;
+}
+
+h4 {
+    font-size: 1.3125em; /*Based on 16px, this is 21px*/
+    line-height: 1.2em;
+}
+
+h5 {
+    font-size: 1.125em; /*Based on 16px, this is 18px*/
+    line-height: 1.2em;
+}
+
+h6 {
+    font-size: 1em; /*Based on 16px, this is 16px*/
     line-height: 1.2em;
 }
 

@@ -113,84 +113,9 @@ a:hover {
 }
 
 /* BLOCKQUOTES */
-blockquote {
-    font-size: 1em;
-    margin: 0.5 0;
-    padding: 1.5em;
-}
-
-blockquote cite {
-    display: block;
-    font-size: .875em;
-    opacity: .8;
-}
-
-blockquote cite:before {
-    content: '\2014';
-    margin-right: .5em;
-}
 
 /* HELPERS */
 
-.textcenter {
-    text-align: center;
-    max-width: none;
-}
-
-/* MEDIA */
-/* IMAGES */
-
-img.scale-with-grid {
-    max-width: 100%;
-    height: auto;
-}
-
-/* COMPONENTS */
-/* BUTTONS */
-
-button {
-    font-size: inherit;
-}
-
-a.button,
-button {
-    display: inline-block;
-    background: rgb(221, 206, 2);
-    border: 2px solid  rgb(193, 180, 2);
-    color: white;
-    padding: 1em;
-    border-radius: .35em;
-    line-height: 1em;
-    text-align: center;
-    margin-bottom: .5em;
-    text-transform: uppercase;
-    letter-spacing: .05em;
-    text-align: center;
-}
-
-a.button:hover, button:hover {
-    background-color: rgb(193, 180, 2);
-    text-decoration: none;
-    border: 2px solid  rgb(164, 153, 2);
-}
-
-a.buttonalt {
-    background: none;
-    color:  rgb(164, 153, 2);
-    padding: 1em;
-    border: 1px solid rgb(164, 153, 2);
-    border-radius: .35em;
-    text-transform: uppercase;
-    letter-spacing: .05em;
-    text-align: center;
-}
-
-a.buttonalt:hover {
-    background: rgb(193, 180, 2);
-    border: 2px solid  rgb(164, 153, 2);
-    color: white;
-    text-decoration: none;
-}
 
 /* BASE LAYOUT */
 

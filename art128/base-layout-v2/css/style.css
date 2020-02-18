@@ -12,8 +12,8 @@
         #COMPONENTS
             #BUTTONS
     #BASE LAYOUT
-        #MEDIAQUERIES
         #CONTAINER
+        #MEDIA QUERIES
         #GRID SYSTEM
             #CLEARFIX
     #BASE SITE
@@ -98,7 +98,7 @@ h6 {
 /* PARAGRAPHS */
 p {
     margin: 0 0 0.5em 0;
-    max-width: 37em;
+    /* max-width: 37em; */
 }
 
 /* LINKS */
@@ -116,147 +116,99 @@ a:hover {
 
 /* HELPERS */
 
-
 /* BASE LAYOUT */
+
+/* CONTAINERS */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
 
 /* MEDIA QUERIES
     #DEFAULT/#SMALL (Mobile First) 0-767px 
     #MEDIUM min-width: 768px+
-    #LARGE min-width: 1050px+
-    #EXTRALARGE min-width: 1250px+
+    #LARGE min-width: 1000px+
+    #EXTRALARGE min-width: 1200px+
 */
 
-/* SMALL (MOBILE) */
-body.demo:before {
-    content: 'Small (0-767px)';
-    display: block;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: #993333;
-    text-align: center;
-    color: #ffffff;
+ /* Small Screens+ (Tablets) */
+ body {
+     font-size: 87.5%;
+ }
+ .container {
+    padding: 0 1em;
 }
 
-body {
-    font-size: 87.5%;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    width: 92%;
-    margin: 0 auto;
-    padding: 0 4%;
-}
-
-/* MEDIUM+ (TABLET) */
-@media (min-width: 768px) {
-    /* Inherit Small/Mobile CSS From Above*/
-    body.demo:before {
-        content: 'Medium (768px-1049px)';
-        background: #bcb83d;
+ /* Mid Sized Screens+ (Tablets) */
+ @media (min-width: 768px) {
+    body {
+        font-size: 87.5%;
     }
-}
+    .container {
+        padding: 0 1em;
+    }
+ }
 
-/* LARGE+ (NOTEBOOK) */
-@media (min-width: 1050px) {
-    /* Inherit Medium/Tablet CSS From Above*/
+ /* Large Sized Screens+ (Laptops) */
+ @media (min-width: 1000px){
     body {
         font-size: 100%;
     }
-
     .container {
-        width: 900px;
+        padding: 0 1em;
+        max-width: 1000px;
         margin: 0 auto;
-        padding: 0 50px;
     }
+ }
 
-    body.demo:before {
-        content: 'Large (1050-1249px)';
-        background: #669933;
-    }
-}
-
-/* EXTRALARGE+ (DESKTOP+) */
-@media (min-width: 1250px) {
-    /* Inherit Large/Notebook CSS From Above*/
+ /* Extra Large Sized Screens+ (Desktops) */
+ @media (min-width: 1200px) {
     body {
         font-size: 112.5%;
     }
-
     .container {
-        width: 1100px;
+        padding: 0 1em;
+        max-width: 1200px;
         margin: 0 auto;
-        padding: 0 50px;
     }
+ }
 
-    body.demo:before {
-        content: 'Extra Large (1250px +)';
-        background: #0099cc;
-    }
-}
+/* ______________________________________________ */
+/* ______________________________________________ */
+/* ______________________________________________ */
 
-/* GRID */
-/* Default Grid (on SMALL+ SCREENS) */
-.row {
-    margin:0;
-}
+/* DEMO ONLY */
+ /* Small Screens+ (Tablets) */
 
-.column {
-    margin: 0 0 3em 0;
-}
-
-/* Medium Grid (on MEDIUM+ SCREENS) */
-
-@media (min-width: 768px) {
-    .row {
-        justify-content: center;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-   .column {
-       float: left;
-       margin-right: 8%;
-   }
-   
-   .column:last-child {
-       margin-right: 0;
-   }
-
-   .column.centered {
-       margin-left: auto;
-       margin-right: auto;
-       float: none;
-   }
-
-   .one-whole.column {width: 100%;}
-   .one-half.column {width: 46%;}
-   .one-third.column {width: 28%;}
-   .one-fourth.column {width: 19%;}
-   .two-thirds.column {width: 64%}
-
-}
-
-/* CLEARFIX */
-.group:after,
-.container:after
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-/* DEMO */
-
-.demo .column {
-    background: grey;
-    padding: 1.5em 0;
+body.demo::before {
+    content: "Small Screen (0 - 767px)";
+    display: block;
+    background: rgba(143, 0, 0, 0.926);
+    color: white;
     text-align: center;
+    padding: .2em;
 }
 
-.demo .column p:last-child {
-    padding: 0 .5em;
-    margin-bottom: 0;
+/* Mid Sized Screens+ (Tablets) */
+@media (min-width: 768px) {
+    body.demo::before {
+        content: "Mid Screen (768 - 999px)";
+        background: rgba(181, 130, 2, 0.974);
+    }
+}
+
+/* Large Sized Screens+ (Laptops) */
+@media (min-width: 1000px) {
+    body.demo:before {
+        content: "Large Screen (1000 - 1199px)";
+        background: rgba(49, 84, 0, 0.947);
+    }
+}
+
+/* Extra Large Sized Screens+ (Desktops) */
+@media (min-width: 1200px) {
+    body.demo:before{
+    content: "Extra Large Screen (1200px+)";
+    background: rgb(0, 65, 101);
+    } 
 }

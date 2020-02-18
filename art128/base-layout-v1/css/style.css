@@ -1,0 +1,262 @@
+/* #BASE CSS (Initital Setup)
+---------------------------------
+    #BASE CONTENT
+        #TYPOGRAPHY
+            #BODY
+            #HEADINGS
+            #PARAGRAPHS
+            #LINKS
+            #HELPERS
+        #MEDIA
+            #IMAGES
+        #COMPONENTS
+            #BUTTONS
+    #BASE LAYOUT
+        #MEDIAQUERIES
+        #CONTAINER
+        #GRID SYSTEM
+            #CLEARFIX
+    #BASE SITE
+        #SITE STRUCTURE
+            #HEADER
+                #SITE-BRANDING (LOGO)
+            #FOOTER
+            #SECTIONS
+            #SUB PAGES
+        #SITE NAVIGATION
+            #TOGGLE-NAV (Default for Small Screens)
+--------------------------------- */
+/* #TYPOGRAPHY  */
+/* Reference
+	62.5%  => 10px
+	68.8%  => 11px
+	75%    => 12px
+	81.3%  => 13px
+	87.5%  => 14px
+	100%   => 16px
+	112.5% => 18px
+	125%   => 20px
+*/
+
+/* BASE START */
+
+/* HTML5 */
+
+header, footer, aside, nav, main, figure, section, article {
+    display: block;
+}
+
+/* BASE CONTENT */
+
+/* BASE TYPOGRAPHY */
+
+/* BODY */
+body {
+    background:rgb(235, 235, 235);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 100%; /*this sets 1em = 16px*/
+    color: rgb(53, 53, 53);
+    line-height: 1.6;
+}
+
+/* HEADINGS */
+h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0.5em 0;
+}
+
+h1 {
+    font-size: 3em; /*Based on 16px, this is 48px*/
+    line-height: 1;
+}
+
+h2 {
+    font-size: 2.25em; /*Based on 16px, this is 36px*/
+    line-height: 1.1;
+}
+
+h3 {
+    font-size: 1.5em; /*Based on 16px, this is 24px*/
+    line-height: 1.2;
+}
+
+h4 {
+    font-size: 1.3125em; /*Based on 16px, this is 21px*/
+    line-height: 1.3;
+}
+
+h5 {
+    font-size: 1.125em; /*Based on 16px, this is 18px*/
+    line-height: 1.4;
+}
+
+h6 {
+    font-size: 1em; /*Based on 16px, this is 16px*/
+    line-height: 1.5;
+}
+
+/* PARAGRAPHS */
+p {
+    margin: 0 0 0.5em 0;
+    /* max-width: 37em; */
+}
+
+/* LINKS */
+a{
+    color: rgba (0, 51, 102, 1);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgba (0, 0, 51, 1);
+    text-decoration: underline;
+}
+
+/* BLOCKQUOTES */
+
+/* HELPERS */
+
+
+/* BASE LAYOUT */
+
+/* MEDIA QUERIES
+    #DEFAULT/#SMALL (Mobile First) 0-767px 
+    #MEDIUM min-width: 768px+
+    #LARGE min-width: 1050px+
+    #EXTRALARGE min-width: 1250px+
+*/
+
+/* SMALL (MOBILE) */
+body.demo:before {
+    content: 'Small (0-767px)';
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #993333;
+    text-align: center;
+    color: #ffffff;
+}
+
+body {
+    font-size: 87.5%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 92%;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/* MEDIUM+ (TABLET) */
+@media (min-width: 768px) {
+    /* Inherit Small/Mobile CSS From Above*/
+    body.demo:before {
+        content: 'Medium (768px-1049px)';
+        background: #bcb83d;
+    }
+}
+
+/* LARGE+ (NOTEBOOK) */
+@media (min-width: 1050px) {
+    /* Inherit Medium/Tablet CSS From Above*/
+    body {
+        font-size: 100%;
+    }
+
+    .container {
+        width: 900px;
+        margin: 0 auto;
+        padding: 0 50px;
+    }
+
+    body.demo:before {
+        content: 'Large (1050-1249px)';
+        background: #669933;
+    }
+}
+
+/* EXTRALARGE+ (DESKTOP+) */
+@media (min-width: 1250px) {
+    /* Inherit Large/Notebook CSS From Above*/
+    body {
+        font-size: 112.5%;
+    }
+
+    .container {
+        width: 1100px;
+        margin: 0 auto;
+        padding: 0 50px;
+    }
+
+    body.demo:before {
+        content: 'Extra Large (1250px +)';
+        background: #0099cc;
+    }
+}
+
+/* GRID */
+/* Default Grid (on SMALL+ SCREENS) */
+.row {
+    margin:0;
+}
+
+.column {
+    margin: 0 0 3em 0;
+}
+
+/* Medium Grid (on MEDIUM+ SCREENS) */
+
+@media (min-width: 768px) {
+    .row {
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+   .column {
+       float: left;
+       margin-right: 8%;
+   }
+   
+   .column:last-child {
+       margin-right: 0;
+   }
+
+   .column.centered {
+       margin-left: auto;
+       margin-right: auto;
+       float: none;
+   }
+
+   .one-whole.column {width: 100%;}
+   .one-half.column {width: 46%;}
+   .one-third.column {width: 28%;}
+   .one-fourth.column {width: 19%;}
+   .two-thirds.column {width: 64%}
+
+}
+
+/* CLEARFIX */
+.group:after,
+.container:after
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* DEMO */
+
+.demo .column {
+    background: grey;
+    padding: 1.5em 0;
+    text-align: center;
+}
+
+.demo .column p:last-child {
+    padding: 0 .5em;
+    margin-bottom: 0;
+}

@@ -52,7 +52,7 @@ header, footer, aside, nav, main, figure, section, article {
 
 /* BODY */
 body {
-    background:rgb(235, 235, 235);
+    background:rgb(255, 255, 255);
     font-family: Helvetica, Arial, sans-serif;
     font-size: 100%; /*this sets 1em = 16px*/
     color: rgb(53, 53, 53);
@@ -97,8 +97,7 @@ h6 {
 
 /* PARAGRAPHS */
 p {
-    margin: 0 0 0.5em 0;
-    /* max-width: 37em; */
+    margin: 0 0 1em 0;
 }
 
 /* LINKS */
@@ -110,6 +109,45 @@ a{
 a:hover {
     color: rgba (0, 0, 51, 1);
     text-decoration: underline;
+}
+
+/* MEDIA */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* BUTTONS */
+.button,
+button {
+    font-size: 1em;
+    display: inline-block;
+    background-color: rgba(0,51,102,1);
+    color: rgba(255,255,255,1);
+    padding: 1em 1.5em;
+    border-radius: .5em;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    line-height: 1;
+    text-align: center;
+}
+
+.button:hover,
+button:hover {
+    color: rgba(255,255,255,1);
+    background-color: rgba(0,0,51,1);
+    text-decoration: none;
+}
+
+.button.alt {
+    background-color: transparent;
+    color: rgba(0,51,102,1);
+    border: 1px solid rgba(0,0,51,1);
+}
+
+button.alt:hover {
+    color: rgba(255,255,255,1);
+    background-color: rgba(0,0,51,1);
 }
 
 /* BLOCKQUOTES */
@@ -232,7 +270,7 @@ body.demo::before {
 
     .one-whole {width: 100%}
     .one-half { width: 46%; }
-    .one-third { width: 29.333%; }
+    .one-third { width: 31.333%; }
     .two-thirds { width: 58.6666%;}
     .one-fourth { width: 21%; }
     .push-one-fourth { margin-left: 26%}
@@ -262,12 +300,14 @@ body.demo::before {
     }
 }
 
-.site-header a {
+.site-header a,
+.site-footer a {
     color: rgba(0, 0, 0, 0.721);
     text-decoration: none;
 }
 
-.site-main a:hover {
+.site-main a:hover,
+.site-footer a:hover  {
     color: rgba(0, 0, 0, 1);
 }
 
@@ -291,6 +331,7 @@ body.demo::before {
     margin: 0;
     padding: 0;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .site-nav li {
@@ -304,10 +345,30 @@ body.demo::before {
 }
 
 /* MAIN */
+.site-main {
 
+}
+
+.hero {
+    text-align: center;
+    background-color: rgba(204, 204, 204, 1);
+    padding: 6em 1em;
+}
+
+.hero p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero h2 {
+    font-size: 3em;
+    line-height: 1;
+}
 
 /* FOOTER */
-
+.site-footer {
+    padding: 2em .5em 2em .5em;
+}
 
 /* DEMO */
 

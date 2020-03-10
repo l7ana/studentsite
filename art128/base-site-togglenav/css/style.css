@@ -360,19 +360,13 @@ body.demo::before {
 
 @media (max-width: 767px) {
 
-    .toggle-nav .container{
-        display: flex;
-        justify-content: space-between;
-    }
     .toggle-nav .menu-button {
         position: static;
         left: auto;
     }
-    .toggle-nav .site-nav
     .toggle-nav .site-nav ul {
         position: absolute;
         left: -9999px;
-        display: block;
     }
     .toggle-nav.expanded  .site-nav ul {
         position: static;

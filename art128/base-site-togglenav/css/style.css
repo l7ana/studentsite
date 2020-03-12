@@ -379,8 +379,9 @@ body.demo::before {
     /* Hide Nav on Small Screens */
     .toggle-nav .site-nav ul {
         position: absolute;
+        max-height: 0;
         left: -9999px;
-        transition: .4s all ease-out;
+        margin-top: 1em;
     }
     /* Show Nav on Small Screens when Expanded Class is Toggled */
     .toggle-nav.expanded  .site-nav ul {
@@ -393,6 +394,16 @@ body.demo::before {
         color: rgba(255,255,255,1);
         margin: .5em 0;
         padding: 1em;
+    }
+
+    /* Animating Nav */
+    .toggle-nav .site-nav ul {
+        transition: .4s all ease-out;
+        max-height: 0px;
+    }
+
+    .toggle-nav.expanded .site-nav ul {
+        max-height: 500px;
     }
 }
 

@@ -2,11 +2,11 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log("hey!")
 
     //Toggle Nav
-    var myMenuButton = document.querySelector('.menubutton');
-    var myToggleMenu = document.querySelector('.toggle-nav');
+    var mymenubutton = document.querySelector('.menu-button');
+    var mytogglemenu = document.querySelector('.toggle-nav');
 
-    myMenuButton.addEventListener('click', function(){
-        myToggleMenu.classList.toggle('expanded');
+    mymenubutton.addEventListener('click', function(){
+        mytogglemenu.classList.toggle('expanded');
     });
 
 });

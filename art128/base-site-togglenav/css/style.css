@@ -320,7 +320,7 @@ body.demo::before {
 }
 
 .site-id a {
-    display: block;
+    display: inline-block;
     padding: .75em 0;
 }
 
@@ -340,7 +340,7 @@ body.demo::before {
 
 .site-nav a {
     display: block;
-    padding:1em 1em;
+    padding:0.5em;
 }
 
 
@@ -348,33 +348,77 @@ body.demo::before {
 .menu-button {
     position: absolute;
     left: -9999px;
-    padding:1em 1em;
-    text-align: right;
+    padding: .5em;
 }
 
 .menu-button:hover {
     cursor: pointer;
 }
 
+.menu-button::selection {
+    background: transparent;
+}
+
 /* TOGGLE NAV */
 
 @media (max-width: 767px) {
 
-    .toggle-nav .menu-button {
-        position: static;
-        left: auto;
+    .toggle-nav .site-id h1 {
+        text-align: left;
     }
+    .toggle-nav .menu-button {
+        position: absolute;
+        left: auto;
+        top: 2em;
+        right: 1em;
+    }
+    .toggle-nav .site-nav ul li {
+        display: block;
+        text-align: center;
+    }
+    /* Hide Nav on Small Screens */
     .toggle-nav .site-nav ul {
         position: absolute;
         left: -9999px;
+        transition: .4s all ease-out;
     }
+    /* Show Nav on Small Screens when Expanded Class is Toggled */
     .toggle-nav.expanded  .site-nav ul {
         position: static;
         left: auto;
         display: block;
-        text-align: right;
+        margin-top: 1em;
+        transition: .8s all ease-out;
+    }
+    .toggle-nav.expanded .site-nav a {
+        background: rgba(0,51,102,1);
+        color: rgba(255,255,255,1);
+        margin: .5em 0;
+        padding: 1em;
     }
 }
+
+/* NAVICON */
+.nav-icon {
+    color: rgba(0,0,0,0);
+    padding:0;
+    
+}
+.nav-icon::after {
+    content: "\2630";
+    display: inline-block;
+    font-size: 1.5em;
+    color: rgba(0,0,0,1);
+    transform: rotate(0deg);
+    transition: .2s all ease-out;
+}
+
+.expanded .nav-icon::after {
+    content: "\2715";
+    transform: rotate(-90deg);
+    transition: transform .4s ease-out;
+}
+
 
 /* MAIN */
 

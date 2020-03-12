@@ -387,8 +387,6 @@ body.demo::before {
         position: static;
         left: auto;
         display: block;
-        margin-top: 1em;
-        transition: .8s all ease-out;
     }
     .toggle-nav.expanded .site-nav a {
         background: rgba(0,51,102,1);

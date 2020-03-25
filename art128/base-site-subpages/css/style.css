@@ -155,7 +155,8 @@ img {
 
 /* BUTTONS */
 .button,
-button {
+button,
+input[type="submit"] {
     font-size: 1em;
     display: inline-block;
     background-color: rgba(0,51,102,1);
@@ -169,7 +170,8 @@ button {
 }
 
 .button:hover,
-button:hover {
+button:hover,
+input[type="submit"]:hover {
     color: rgba(255,255,255,1);
     background-color: rgba(0,0,51,1);
     text-decoration: none;
@@ -348,7 +350,17 @@ body.demo::before {
 }
 
 .sectionhead {
-    margin-top: 1em;
+    text-align: center;
+    padding-top: 2em;
+    margin-bottom: 3em;
+}
+
+.sectionhead::after {
+    content: "";
+    display: block;
+    width: 50px;
+    border-bottom: 3px solid rgba(0, 0, 0, .1);
+    margin: 0.5em auto;
 }
 
 /* SITE ID (Logo) */
@@ -498,6 +510,32 @@ body.demo::before {
     background: rgba(0, 0, 0, 0.125);
     padding: 1em;
     text-align: center;
+}
+
+/* FORMS */
+form {
+    padding: 0;
+}
+
+label, input[type="text"], textarea {
+    width: 100%;
+    display: block;
+}
+
+label {
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+
+input, textarea {
+    padding: 1em;
+    margin-bottom: .5em;
+    background-color: rgba(0, 0, 0, .1);
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+input[type="submit"] {
+    margin-top: 1em;
 }
 
 /* TESTING */

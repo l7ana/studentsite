@@ -347,6 +347,10 @@ body.demo::before {
     color: rgba(0, 0, 0, 1);
 }
 
+.sectionhead {
+    margin-top: 1em;
+}
+
 /* SITE ID (Logo) */
 
 .site-id h1 {
@@ -497,6 +501,10 @@ body.demo::before {
 }
 
 /* TESTING */
+
+/* .column {
+    background-color: red;
+} */
 
 /* * {
     background:rgba(249, 65, 24, 0.899);

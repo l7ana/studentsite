@@ -1,0 +1,578 @@
+/* #BASE CSS (Initital Setup)
+---------------------------------
+    #BASE CONTENT
+        #TYPOGRAPHY
+            #BODY
+            #HEADINGS
+            #PARAGRAPHS
+            #LINKS
+            #HELPERS
+        #MEDIA
+            #IMAGES
+        #COMPONENTS
+            #BUTTONS
+    #BASE LAYOUT
+        #CONTAINER
+        #MEDIA QUERIES
+        #GRID SYSTEM
+            #CLEARFIX
+    #BASE SITE
+        #SITE STRUCTURE
+            #HEADER
+                #SITE-BRANDING (LOGO)
+            #FOOTER
+            #SECTIONS
+            #SUB PAGES
+        #SITE NAVIGATION
+            #TOGGLE-NAV (Default for Small Screens)
+--------------------------------- */
+/* #TYPOGRAPHY  */
+/* Reference
+	62.5%  => 10px
+	68.8%  => 11px
+	75%    => 12px
+	81.3%  => 13px
+	87.5%  => 14px
+	100%   => 16px
+	112.5% => 18px
+	125%   => 20px
+*/
+
+/* BASE START */
+
+/* HTML5 */
+
+header, footer, aside, nav, main, figure, section, article {
+    display: block;
+}
+
+/* BASE CONTENT */
+
+/* BASE TYPOGRAPHY */
+
+/* BODY */
+body {
+    background:rgb(255, 255, 255);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 100%; /*this sets 1em = 16px*/
+    color: rgb(53, 53, 53);
+    line-height: 1.6;
+}
+
+/* HEADINGS */
+h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0.5em 0;
+}
+
+h1 {
+    font-size: 3em; 
+    line-height: 1;
+}
+
+h2 {
+    font-size: 1.75em;
+    line-height: 1.1;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 1.5em; /*Based on 16px, this is 24px*/
+    line-height: 1.2;
+}
+
+h4 {
+    font-size: 1.3125em; /*Based on 16px, this is 21px*/
+    line-height: 1.3;
+}
+
+h5 {
+    font-size: 1.125em; /*Based on 16px, this is 18px*/
+    line-height: 1.4;
+}
+
+h6 {
+    font-size: 1em; /*Based on 16px, this is 16px*/
+    line-height: 1.5;
+}
+
+.date {
+    font-size: .75em;
+    color:rgba(0,0,0,.5);
+    font-style: italic;
+    margin-bottom: 2em;
+}
+
+/* PARAGRAPHS */
+p {
+    margin: 0 0 1em 0;
+}
+
+/* ARTICLE */
+article h1 {text-align: center;}
+
+article h1+h2 {text-align: center;}
+
+article .date {text-align: center;}
+
+article {
+    padding: 4em 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+article .date + p::first-letter {
+    font-size: 6.4em;
+    font-weight: bolder;
+    line-height: .6;
+    float: left;
+    margin: 0 .1em 0 0;
+    padding: 0;
+}
+
+article .date + p::first-line {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* LINKS */
+a{
+    color: rgba (0, 51, 102, 1);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgba (0, 0, 51, 1);
+    text-decoration: underline;
+}
+
+/* MEDIA */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* HELPERS */
+@media (min-width: 768px){
+    .hideonlarge {visibility: hidden;}
+}
+
+/* BUTTONS */
+.button,
+button,
+input[type="submit"] {
+    font-size: 1em;
+    display: inline-block;
+    background-color: rgba(0,51,102,1);
+    color: rgba(255,255,255,1);
+    padding: 1em 1.5em;
+    border-radius: .5em;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    line-height: 1;
+    text-align: center;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover {
+    color: rgba(255,255,255,1);
+    background-color: rgba(0,0,51,1);
+    text-decoration: none;
+}
+
+.button.alt {
+    background-color: transparent;
+    color: rgba(0,51,102,1);
+    border: 1px solid rgba(0,0,51,1);
+}
+
+button.alt:hover {
+    color: rgba(255,255,255,1);
+    background-color: rgba(0,0,51,1);
+}
+
+/* BLOCKQUOTES */
+
+/* HELPERS */
+
+/* BASE LAYOUT */
+
+/* CONTAINERS */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* MEDIA QUERIES
+    #DEFAULT/#SMALL (Mobile First) 0-767px 
+    #MEDIUM min-width: 768px+
+    #LARGE min-width: 1000px+
+    #EXTRALARGE min-width: 1200px+
+*/
+
+ /* Small Screens+ (Tablets) */
+ body {
+     font-size: 87.5%;
+ }
+ .container {
+    padding: 0 1em;
+}
+
+ /* Mid Sized Screens+ (Tablets) */
+ @media (min-width: 768px) {
+    body {
+        font-size: 87.5%;
+    }
+    .container {
+        padding: 0 1em;
+    }
+ }
+
+ /* Large Sized Screens+ (Laptops) */
+ @media (min-width: 1000px){
+    body {
+        font-size: 100%;
+    }
+    .container {
+        padding: 0 1em;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+ }
+
+ /* Extra Large Sized Screens+ (Desktops) */
+ @media (min-width: 1200px) {
+    body {
+        font-size: 112.5%;
+    }
+    .container {
+        padding: 0 1em;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+ }
+
+/* ______________________________________________ */
+/* ______________________________________________ */
+/* ______________________________________________ */
+
+/* DEMO ONLY */
+ /* Small Screens+ (Tablets) */
+
+body.demo::before {
+    content: "Small Screen (0 - 767px)";
+    display: block;
+    background: rgba(143, 0, 0, 0.926);
+    color: white;
+    text-align: center;
+    padding: .2em;
+}
+
+/* Mid Sized Screens+ (Tablets) */
+@media (min-width: 768px) {
+    body.demo::before {
+        content: "Mid Screen (768 - 999px)";
+        background: rgba(181, 130, 2, 0.974);
+    }
+}
+
+/* Large Sized Screens+ (Laptops) */
+@media (min-width: 1000px) {
+    body.demo:before {
+        content: "Large Screen (1000 - 1199px)";
+        background: rgba(49, 84, 0, 0.947);
+    }
+}
+
+/* Extra Large Sized Screens+ (Desktops) */
+@media (min-width: 1200px) {
+    body.demo:before{
+    content: "Extra Large Screen (1200px+)";
+    background: rgb(0, 65, 101);
+    } 
+}
+
+/* GRID SYSTEM */
+
+.column {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+@media (min-width: 768px) {
+    .row { display: flex;
+        margin-left: -1%;
+        margin-right: -1%;}
+    .column {
+        flex-grow: 0;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    .one-whole {width: 100%}
+    .one-half { width: 46%; }
+    .one-third { width: 31.333%; }
+    .two-thirds { width: 58.6666%;}
+    .one-fourth { width: 21%; }
+    .push-one-fourth { margin-left: 26%}
+    .push-one-third { margin-left: 33.3333%}
+    .push-two-third { margin-left: 66.6666%}
+
+    .row.centered { justify-content: center; }
+
+    .column.centered {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* SITE STRUCTURE */
+
+/* HEADER */
+
+.site-header {
+    padding: 1em .5em;
+}
+
+@media (min-width: 768px) {
+    .site-header .container{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.site-header a,
+.site-footer a {
+    color: rgba(0, 0, 0, 0.721);
+    text-decoration: none;
+}
+
+.site-main a:hover,
+.site-footer a:hover  {
+    color: rgba(0, 0, 0, 1);
+}
+
+.sectionhead {
+    text-align: center;
+    padding-top: 2em;
+    margin-bottom: 3em;
+}
+
+.sectionhead::after {
+    content: "";
+    display: block;
+    width: 50px;
+    border-bottom: 3px solid rgba(0, 0, 0, .1);
+    margin: 0.5em auto;
+}
+
+/* SITE ID (Logo) */
+
+.site-id h1 {
+    font-size: 1.5em;
+    margin: 0;
+    text-align: center;
+}
+
+.site-id a {
+    display: inline-block;
+    padding: .75em 0;
+}
+
+/* SITE NAV (Top Nav) */
+
+.site-nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.site-nav li {
+    list-style: none;
+}
+
+.site-nav a {
+    display: block;
+    padding:0.5em;
+}
+
+
+/* MENU BUTTON */
+.menu-button {
+    position: absolute;
+    left: -9999px;
+    padding: .5em;
+}
+
+.menu-button:hover {
+    cursor: pointer;
+}
+
+.menu-button::selection {
+    background: transparent;
+}
+
+/* TOGGLE NAV */
+
+@media (max-width: 767px) {
+
+    .toggle-nav .site-id h1 {
+        text-align: left;
+    }
+    .toggle-nav .menu-button {
+        position: absolute;
+        left: auto;
+        top: 2em;
+        right: 1em;
+    }
+    .toggle-nav .site-nav ul li {
+        display: block;
+        text-align: center;
+    }
+    /* Hide Nav on Small Screens */
+    .toggle-nav .site-nav ul {
+        position: absolute;
+        max-height: 0;
+        left: -9999px;
+        margin-top: 1em;
+    }
+    /* Show Nav on Small Screens when Expanded Class is Toggled */
+    .toggle-nav.expanded  .site-nav ul {
+        position: static;
+        left: auto;
+        display: block;
+    }
+    .toggle-nav.expanded .site-nav a {
+        background: rgba(0,51,102,1);
+        color: rgba(255,255,255,1);
+        margin: .5em 0;
+        padding: 1em;
+    }
+
+    /* Animating Nav */
+    .toggle-nav .site-nav ul {
+        transition: .4s all ease-out;
+        max-height: 0px;
+    }
+
+    .toggle-nav.expanded .site-nav ul {
+        max-height: 500px;
+    }
+}
+
+/* NAVICON */
+.nav-icon {
+    color: rgba(0,0,0,0);
+    padding:0;
+    
+}
+.nav-icon::after {
+    content: "\2630";
+    display: inline-block;
+    font-size: 1.5em;
+    color: rgba(0,0,0,1);
+    transform: rotate(0deg);
+    transition: .2s all ease-out;
+}
+
+.expanded .nav-icon::after {
+    content: "\2715";
+    transform: rotate(-90deg);
+    transition: transform .4s ease-out;
+}
+
+
+/* MAIN */
+
+.hero {
+    text-align: center;
+    background-color: rgba(204, 204, 204, 1);
+    padding: 6em 1em;
+}
+
+.hero p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero h2 {
+    font-size: 3em;
+    line-height: 1;
+}
+
+/* FOOTER */
+.site-footer {
+    padding: 2em .5em 2em .5em;
+}
+
+/* DEMO */
+
+.demo .column {
+    background: rgba(0, 0, 0, 0.125);
+    padding: 1em;
+    text-align: center;
+}
+
+/* FORMS */
+form {
+    padding: 0;
+}
+
+label, input[type="text"], textarea {
+    width: 100%;
+    display: block;
+}
+
+label {
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+
+input, textarea {
+    padding: 1em;
+    margin-bottom: .5em;
+    background-color: rgba(0, 0, 0, .1);
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+input[type="submit"] {
+    margin-top: 1em;
+}
+
+/* TESTING */
+
+/* .column {
+    background-color: red;
+} */
+
+/* * {
+    background:rgba(249, 65, 24, 0.899);
+    color:rgba(249, 65, 24, 0.899);
+    shadow:;
+} */
+
+/* FOR DEV TESTING ONLY */
+/* 
+* {
+    background-color: rgba(255,0,0,.2);
+    color: rgba(255, 0, 0, 0.837);
+    box-shadow: 0 0 0 3px inset rgba(255,0,0,1);
+}
+
+.site-header {
+    background-color: rgba(0, 255, 0,.4);
+    box-shadow: 0 0 0 3px inset rgba(,0,255,0,1);
+    padding: 0.5em;
+}
+.site-main {
+    background-color: rgba(0, 0, 255,.4);
+    box-shadow: 0 0 0 3px inset rgba(0,0,255,1);
+}
+.site-footer {
+    background-color: rgba(255, 255, 0,.4);
+    box-shadow: 0 0 0 3px inset rgba(255,255,0,1);
+} */

@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var offset;
     if (siteheaderfixed) {
       offset = document.querySelector(".site-id").offsetHeight + 15;
-    } else {
+    } else { 
       offset = 0;
     }
 

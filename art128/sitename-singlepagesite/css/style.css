@@ -332,8 +332,19 @@ body.demo::before {
 
 /* HEADER */
 
+.site-header.sticky {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.site-header.sticky + main {
+    padding-top: 4em;
+}
+
 .site-header {
-    padding: 1em .5em;
+    padding: .5em;
+    background: white;
 }
 
 @media (min-width: 768px) {
@@ -356,8 +367,8 @@ body.demo::before {
 
 .sectionhead {
     text-align: center;
-    padding-top: 2em;
-    margin-bottom: 3em;
+    padding-top: 4em;
+    margin-bottom: .5em;
 }
 
 .sectionhead::after {
@@ -386,7 +397,8 @@ body.demo::before {
 .site-nav ul {
     display: flex;
     margin: 0;
-    padding: 0;
+    padding: .75em;
+    padding-right: 2em;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -485,7 +497,6 @@ body.demo::before {
     transition: transform .4s ease-out;
 }
 
-
 /* MAIN */
 
 .hero {
@@ -497,9 +508,10 @@ body.demo::before {
 .hero p {
     margin-left: auto;
     margin-right: auto;
+    width: 50%;
 }
 
-.hero h2 {
+.hero h1 {
     font-size: 3em;
     line-height: 1;
 }
@@ -520,6 +532,8 @@ body.demo::before {
 /* FORMS */
 form {
     padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 label, input[type="text"], textarea {
@@ -535,12 +549,27 @@ label {
 input, textarea {
     padding: 1em;
     margin-bottom: .5em;
-    background-color: rgba(0, 0, 0, .1);
-    border: 1px solid rgba(0, 0, 0, .1);
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, .5);
 }
 
 input[type="submit"] {
     margin-top: 1em;
+}
+/* Custom Site CSS */
+#about {
+    background: rgba(0,0,0,0.05);
+}
+
+#contact {
+    background: rgba(0,0,0,0.1);
+}
+
+/* Verticle Media Query */
+@media  (min-height: 600px) {
+    #contact {
+        padding-bottom: 20em;
+    }
 }
 
 /* TESTING */

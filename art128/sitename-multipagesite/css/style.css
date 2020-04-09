@@ -48,11 +48,12 @@ header, footer, aside, nav, main, figure, section, article {
 
 /* BASE CONTENT */
 
+background-image: linear-gradient(45deg, White 35.71%, Turquoise 35.71%, Turquoise 50%, White 50%, White 85.71%, Turquoise 85.71%, Turquoise 100%);
+
 /* BASE TYPOGRAPHY */
 
 /* BODY */
 body {
-    background:rgb(255, 255, 255);
     font-family: 'interstate';
     font-size: 125%; /*this sets 1em = 16px*/
     color: rgb(56, 69, 96);
@@ -61,39 +62,51 @@ body {
 
 /* HEADINGS */
 h1, h2, h5, h6 {
-    font-size: 'rift-soft', sans-serif;
+    font-family: 'rift-soft', sans-serif;
+}
+
+h1 {
+  font-size: 718%;
+  line-height: 1em;
+  color: rgb(225,72,30);
+}
+
+h2 {
+  font-size: 348%;
+  color: rgba(121,196,167);
+}
+
+h5 {
+  font-size: 125%
+}
+
+h6 {
+  font-size: 225%;
 }
 
 h3, h4 {
     font-family: 'interstate';
 }
 
+h3 {
+  font-size: 225%;
+  line-height: 1.25em;
+  color: rgb(56, 69, 96);
+}
+
+h4 {
+  font-size: 125%;
+  line-height: .5em;
+  color: rgba(121,196,167);
+}
+
 /* PARAGRAPHS */
 p {
+  font-family: 'interstate',sans-serif;
     margin: 0 0 1em 0;
-}
-
-/* ARTICLE */
-article {
-    padding: 4em 0;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-article .date + p::first-letter {
-    color: red;
-    font-size: 6.4em;
-    font-weight: bolder;
-    line-height: .6;
-    float: left;
-    margin: 0 .1em 0 0;
-    padding: 0;
-}
-
-article .date + p::first-line {
-    text-transform: uppercase;
-    font-weight: bold;
+  font-size: 125%; 
+    color: rgb(56, 69, 96);
+    line-height: 1.6;
 }
 
 /* LINKS */
@@ -294,6 +307,7 @@ body.demo::before {
 
 .site-header {
     padding: 1em .5em;
+    background-color: rgb(56, 69, 96);
 }
 
 @media (min-width: 768px) {
@@ -312,20 +326,6 @@ body.demo::before {
 .site-main a:hover,
 .site-footer a:hover  {
     color: rgba(0, 0, 0, 1);
-}
-
-.sectionhead {
-    text-align: center;
-    padding-top: 2em;
-    margin-bottom: 3em;
-}
-
-.sectionhead::after {
-    content: "";
-    display: block;
-    width: 50px;
-    border-bottom: 3px solid rgba(0, 0, 0, .1);
-    margin: 0.5em auto;
 }
 
 /* SITE ID (Logo) */
@@ -445,12 +445,10 @@ body.demo::before {
     transition: transform .4s ease-out;
 }
 
-
 /* MAIN */
 
 .hero {
-    text-align: center;
-    background-color: rgba(204, 204, 204, 1);
+    text-align: left;
     padding: 6em 1em;
 }
 
@@ -476,63 +474,3 @@ body.demo::before {
     padding: 1em;
     text-align: center;
 }
-
-/* FORMS */
-form {
-    padding: 0;
-}
-
-label, input[type="text"], textarea {
-    width: 100%;
-    display: block;
-}
-
-label {
-    margin-top: 1em;
-    margin-bottom: .5em;
-}
-
-input, textarea {
-    padding: 1em;
-    margin-bottom: .5em;
-    background-color: rgba(0, 0, 0, .1);
-    border: 1px solid rgba(0, 0, 0, .1);
-}
-
-input[type="submit"] {
-    margin-top: 1em;
-}
-
-/* TESTING */
-
-/* .column {
-    background-color: red;
-} */
-
-/* * {
-    background:rgba(249, 65, 24, 0.899);
-    color:rgba(249, 65, 24, 0.899);
-    shadow:;
-} */
-
-/* FOR DEV TESTING ONLY */
-/* 
-* {
-    background-color: rgba(255,0,0,.2);
-    color: rgba(255, 0, 0, 0.837);
-    box-shadow: 0 0 0 3px inset rgba(255,0,0,1);
-}
-
-.site-header {
-    background-color: rgba(0, 255, 0,.4);
-    box-shadow: 0 0 0 3px inset rgba(,0,255,0,1);
-    padding: 0.5em;
-}
-.site-main {
-    background-color: rgba(0, 0, 255,.4);
-    box-shadow: 0 0 0 3px inset rgba(0,0,255,1);
-}
-.site-footer {
-    background-color: rgba(255, 255, 0,.4);
-    box-shadow: 0 0 0 3px inset rgba(255,255,0,1);
-} */

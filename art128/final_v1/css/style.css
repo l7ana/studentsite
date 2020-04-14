@@ -56,8 +56,6 @@ body { margin: 0;}
 
 /* BASE CONTENT */
 
-/* background-image: linear-gradient(45deg, White 35.71%, Turquoise 35.71%, Turquoise 50%, White 50%, White 85.71%, Turquoise 85.71%, Turquoise 100%); */
-
 /* BASE TYPOGRAPHY */
 
 /* BODY */
@@ -157,12 +155,33 @@ img {
     display: block;
     width: 150%;
     margin-left: -50%;
+    margin-top: -10%;
+}
+
+.image-pull-left-2 {
+    max-width: none;
+    display: block;
+    width: 150%;
+    margin-left: -50%;
+    margin-top: -30%;
 }
 
 .image-half-column {
     max-width: 60%;
     margin-top: 1em;
     margin-bottom: 2em;
+}
+
+.fries {
+    max-width: 50%;
+    display: block;
+    margin-left: -15%;
+    margin-bottom: -25%;
+}
+
+.taco {
+    margin-left: 85%;
+    margin-top: -150%;
 }
 
 /* HELPERS */
@@ -201,7 +220,7 @@ input[type="submit"]:hover {
 
 /* CONTAINERS */
 .container {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -315,7 +334,7 @@ input[type="submit"]:hover {
 .site-id .logo {
     margin: 0;
     text-align: center;
-    max-width: 200px;
+    max-width: 30%;
 }
 
 .site-id a {
@@ -340,6 +359,7 @@ input[type="submit"]:hover {
 .site-nav a {
     display: block;
     padding:0.5em;
+    padding-top: 1em;
 }
 
 
@@ -444,6 +464,20 @@ input[type="submit"]:hover {
     line-height: 1;
 }
 
+.about{
+    max-width: 85%;
+    margin: 0 auto;
+    margin-bottom: 10em;
+}
+
+.about h2 {
+    color: rgba(121,196,167);
+}
+
+.events h2 {
+    color: rgb(225,72,30);
+}
+
 /* FOOTER */
 .site-footer {
     padding: 2em .5em 2em .5em;
@@ -452,12 +486,17 @@ input[type="submit"]:hover {
 
 .site-footer img {
     max-width: 25px;
+    padding-top: 1em;
 }
 
-/* DEMO */
+.site-footer a {
+    padding: 1em;
+}
+
+/* DEMO
 
 .demo .column {
     background: rgba(0, 0, 0, 0.125);
     padding: 1em;
     text-align: center;
-}
+} */

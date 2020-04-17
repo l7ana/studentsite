@@ -1,12 +1,19 @@
-document.addEventListener('DOMContentLoaded', function() {
-    console.log("hey!")
+document.addEventListener('DOMContentLoaded', function () {
 
-    //Toggle Nav
+    // TOGGLE NAV 
     var mymenubutton = document.querySelector('.menu-button');
-    var mytogglemenu = document.querySelector('.toggle-nav');
+    var mytogglenav = document.querySelector('.toggle-nav');
 
-    mymenubutton.addEventListener('click', function(){
-        mytogglemenu.classList.toggle('expanded');
+    mymenubutton.addEventListener('click', function () {
+        mytogglenav.classList.toggle('expanded');
     });
+
+    //STICKY NAV - REMOVE EXPANDED CLASS FOR MOBILE
+    var stickynavlinks = document.querySelectorAll(".sticky nav a");
+    for (var i = 0; i < stickynavlinks.length; i++) {
+        stickynavlinks[i].onclick = function () {
+            mytogglenav.classList.remove("expanded");
+        }
+    };
 
 });

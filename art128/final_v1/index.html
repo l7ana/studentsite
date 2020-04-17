@@ -57,6 +57,7 @@ body {
                     <h3>February 7th, 2020 <br> Kewalo Basin,</h3>
                         <p class="address">1125 Ala Moana Blvd, <br>
                             Honolulu, HI, 96814</p>
+                            <hr>
                     <p class="light-navy">5:00pm–9:30pm</p>
                     <a href="" class="button"> <h5>See Vendors</h5> </a>
                 </div>
@@ -73,25 +74,45 @@ body {
         </div>
         </section>
 </div>
-<img src="img/food/taco.png" alt="taco" class="taco">
 
 <div class="container">
+    <img src="img/food/taco.png" alt="taco" class="taco">
     <section id="events" class="events">
         <h2>UPCOMING EVENTS</h2>
         <div class="row">
             <div class="column one-half">
                 <h3>February</h3>
-                <h6>07</h6>
-                <p>FINGER FOODS</p>
-                <h6>28</h6>
-                <p>Spicy Fest</p>
+                <div class="accordian">
+                    <h6 class="turq">07 <span class="event-name"> <p>Finger Foods </p></span><div class="arrow"></div></h6> 
+                    <div class="collapsible">
+                        <p>Collapsible Content</p>
+                    </div>
+                </div>
+                <div class="accordian">
+                    <h6 class="orange">28 <span class="event-name"> <p>Spicy Fest</p> </span><div class="arrow"></div></h6> 
+                    <div class="collapsible">
+                        <p>Collapsible Content</p>
+                    </div>
+                </div>
                 <h3>March</h3>
-                <h6>04</h6>
-                <p>SHAKIN' BACON</p>
-                <h6>11</h6>
-                <p>LOCAL GRINDZ</p>
-                <h6>25</h6>
-                <p>CRAZY 4 GRAVY</p>
+                <div class="accordian">
+                    <h6 class="turq">04 <span class="event-name"> <p>Shakin' Bacon</p></span><div class="arrow"></div></h6> 
+                    <div class="collapsible">
+                        <p>Collapsible Content</p>
+                    </div>
+                </div>
+                <div class="accordian">
+                    <h6 class="orange">11 <span class="event-name"> <p>Local Grindz</p> </span><div class="arrow"></div></h6> 
+                    <div class="collapsible">
+                        <p>Collapsible Content</p>
+                    </div>
+                </div>
+                <div class="accordian">
+                    <h6 class="navy">24 <span class="event-name"> <p>Mediterranean</p> </span><div class="arrow"></div></h6> 
+                    <div class="collapsible">
+                        <p>Collapsible Content</p>
+                    </div>
+                </div>
             </div>
             <div class="column one-half">
                 <h3>Map</h3>
@@ -141,6 +162,8 @@ body {
 </body>
 
 </html>
+<!-- Accordian JS -->
+<script src="js/accordian.js"></script>
 <!-- Scroll JS -->
 <script src="js/scroll.js"></script>
 <!-- Main JS -->

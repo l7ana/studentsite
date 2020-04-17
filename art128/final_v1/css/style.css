@@ -107,6 +107,12 @@ h4 {
   line-height: 1;
 }
 
+h6 {
+    font-weight: bold;
+    font-size: 150%;
+    color: white;
+}
+
 /* TYPE SPECIMEN */
 .hero-headline {
     margin: 0;
@@ -124,11 +130,15 @@ h4 {
     color: rgba(124, 141, 178);
 }
 
+span.event-name {
+    font-weight: normal;
+}
+
 /* PARAGRAPHS */
 p {
   font-family: 'interstate',sans-serif;
     margin: 0 0 1em 0;
-    font-size: 150%; 
+    font-size: 100%; 
     color: rgb(56, 69, 96);
     line-height: 1.6;
 }
@@ -142,6 +152,10 @@ a{
 a:hover {
     color: rgba (0, 0, 51, 1);
     text-decoration: underline;
+}
+
+.address {
+    line-height: 1.2;
 }
 
 /* MEDIA */
@@ -173,15 +187,45 @@ img {
 }
 
 .fries {
-    max-width: 50%;
     display: block;
-    margin-left: -15%;
-    margin-bottom: -25%;
+    max-width: 75%;
+    margin: 0 auto;
+    padding-bottom: 2em;
 }
 
 .taco {
-    margin-left: 85%;
-    margin-top: -150%;
+    display: block;
+    margin: 0 auto;
+    margin-top: -10em;
+    padding-bottom: 3em;
+}
+
+.gyro {
+    display: block;
+    margin: 3em auto;
+}
+
+/* MEDIA for Large Screens */
+
+.site-main {overflow-x: hidden;}
+
+@media (min-width: 768px) {
+
+    #catering {margin-top: -3em;}
+
+    #events {margin-top: -7em;}
+
+    .fries {
+        max-width: 35%;
+        transform: translate(-145%,35%);
+    }
+
+    .taco { transform: translate(150%,-15%); }
+
+    .gyro {
+        transform: translate(90%, -10%);
+    }
+
 }
 
 /* HELPERS */
@@ -197,26 +241,44 @@ input[type="submit"] {
     display: inline-block;
     background-color: rgb(121,196,167);
     color:  rgb(56, 69, 96);
+    border: 3px solid rgb(56, 69, 96);
     padding: 1em 1.5em;
-    text-transform: uppercase;
     letter-spacing: .05em;
     line-height: 1;
     text-align: center;
+    margin-bottom: 3em;
 }
-
-/* .button:hover,
-button:hover,
-input[type="submit"]:hover {
-    color:  rgb(121,196,167);
-    background-color: rgb(56, 69, 96);
-    text-decoration: none;
-} */
-
-/* BLOCKQUOTES */
 
 /* HELPERS */
 
-/* BASE LAYOUT */
+hr {
+    display: block;
+    height: 3px;
+    background-color: rgb(56, 69, 96);
+    margin: .5em auto;
+    margin-bottom: 1em;
+}
+
+/* ACCORDIAN */
+
+.accordian h6 {
+    display: inline-block;
+    padding: .25em 1em;
+    width: 100%;
+}
+
+.accordian p {
+    display: inline;
+    padding: .25em 1em;
+    color: white;
+}
+
+.turq { background-color:  rgb(121,196,167);}
+.orange { background-color:  rgb(225,72,30);}
+.navy { background-color:  rgb(56, 69, 96);}
+
+.accordian h6
+
 
 /* CONTAINERS */
 .container {
@@ -311,8 +373,12 @@ input[type="submit"]:hover {
 
 /* HEADER */
 
-.site-header {
-    padding: 1em .5em;
+.site-header.sticky {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    padding: .5em .5em;
     background-color: rgb(56, 69, 96);
 }
 
@@ -347,7 +413,7 @@ input[type="submit"]:hover {
 .site-nav ul {
     display: flex;
     margin: 0;
-    padding: 0;
+    padding-top: .5em;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -451,7 +517,8 @@ input[type="submit"]:hover {
 
 .hero {
     text-align: left;
-    padding: 6em 1em;
+    padding-top: 10em;
+    margin-bottom: -3.5em;
 }
 
 .hero p {
@@ -467,7 +534,7 @@ input[type="submit"]:hover {
 .about{
     max-width: 85%;
     margin: 0 auto;
-    margin-bottom: 10em;
+    margin-bottom: 8em;
 }
 
 .about h2 {
@@ -476,6 +543,10 @@ input[type="submit"]:hover {
 
 .events h2 {
     color: rgb(225,72,30);
+}
+
+.catering {
+    margin-bottom: 3em;
 }
 
 /* FOOTER */
@@ -489,14 +560,4 @@ input[type="submit"]:hover {
     padding-top: 1em;
 }
 
-.site-footer a {
-    padding: 1em;
-}
-
-/* DEMO
-
-.demo .column {
-    background: rgba(0, 0, 0, 0.125);
-    padding: 1em;
-    text-align: center;
-} */
+.site-footer a {padding: 1em;}

@@ -53,6 +53,7 @@ header, footer, aside, nav, main, figure, section, article {
 }
 
 body { margin: 0;}
+body {background: url(img/diagonal_pattern.gif) repeat;}
 
 /* BASE CONTENT */
 
@@ -130,10 +131,6 @@ h6 {
     color: rgba(124, 141, 178);
 }
 
-span.event-name {
-    font-weight: normal;
-}
-
 #events h3 {
     margin: .5em 0;
 }
@@ -152,7 +149,7 @@ p {
 }
 
 #catering p {
-    max-width: 80%;
+    max-width: 85%;
 }
 
 /* LINKS */
@@ -195,9 +192,8 @@ img {
 }
 
 .image-half-column {
-    max-width: 50%;
+    max-width: 250px;
     margin-top: 1em;
-    margin-bottom: 1.5em;
 }
 
 .fries {
@@ -225,13 +221,23 @@ img {
 
 @media (min-width: 768px) {
 
-    #catering {margin-top: -3em;}
+    #about { margin-top: -5em; }
+    
+    #catering {
+        margin-top: -3em; 
+        max-width: 100%;
+    }
 
-    #events {margin-top: -7em;}
+    #top {max-width: 100%;}
+
+    #events {
+        margin-top: -15em; 
+        max-width: 100%;
+    }
 
     .fries {
         max-width: 35%;
-        transform: translate(-145%,35%);
+        transform: translate(-145%,10%);
     }
 
     .taco { transform: translate(150%,-15%); }
@@ -302,13 +308,14 @@ hr {
 .accordian h6 {
     display: inline-block;
     padding: .25em 1em;
-    width: 100%;
+    width: 50px;
 }
 
-.accordian p {
+.event-name {
     display: inline;
-    padding: .25em 1em;
+    font-weight: normal;
     color: white;
+    padding: .25em 1em;
 }
 
 .turq { background-color:  rgb(121,196,167);}
@@ -342,18 +349,14 @@ hr {
   }
 
 .accordian .arrow { 
-    /* width: 0; 
-    height: 0;  */
+    display: inline-block;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
     border-top: 6px solid white;
-    /* border-bottom: 1px solid transparent; */
-    /* display: inline-block; */
     float: right;
-    margin-top: .65em;
+    margin-top: 1.45em;
+    margin-right: 1em;
     margin-bottom: 0;
-    /* margin-left: .5em;
-    margin-right: .2em; */
   }
   
   .accordian.open .arrow {
@@ -617,6 +620,8 @@ hr {
     text-align: left;
     padding-top: 10em;
     margin-bottom: -3.5em;
+    max-width: 75%;
+    margin: 0 auto;
 }
 
 .hero p {
@@ -643,9 +648,17 @@ hr {
     color: rgb(225,72,30);
 }
 
-.catering {
-    margin-bottom: 3em;
-    max-width: 75%;
+@media (max-width: 767px ) {
+    #events {
+        max-width: 75%;
+        margin: 0 auto;
+    }
+    
+    #catering {
+        margin-bottom: 3em;
+        max-width: 75%;
+        margin: 0 auto;
+    }
 }
 
 /* FOOTER */

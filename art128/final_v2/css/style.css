@@ -315,7 +315,7 @@ hr {
     display: inline;
     font-weight: normal;
     color: white;
-    padding: .25em 1em;
+    padding: 0 1em;
 }
 
 .turq { background-color:  rgb(121,196,167);}

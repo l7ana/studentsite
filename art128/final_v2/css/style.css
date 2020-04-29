@@ -154,12 +154,12 @@ p {
 
 /* LINKS */
 a{
-    color: rgba (0, 51, 102, 1);
+    color: rgb(121,196,167);
     text-decoration: none;
 }
 
 a:hover {
-    color: rgba (0, 0, 51, 1);
+    color: rgb(202, 235, 222);
     text-decoration: underline;
 }
 
@@ -349,7 +349,6 @@ hr {
   }
 
 .accordian .arrow { 
-    display: inline-block;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
     border-top: 6px solid white;

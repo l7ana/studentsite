@@ -205,6 +205,7 @@ img {
 
 .taco {
     display: block;
+    max-width: 75%;
     margin: 0 auto;
     margin-top: -10em;
     padding-bottom: 3em;
@@ -488,8 +489,9 @@ hr {
 
 .site-id .logo {
     margin: 0;
-    text-align: center;
+    padding-top: 1em;
     max-width: 30%;
+    min-width: 100px;
 }
 
 .site-id a {
@@ -662,7 +664,7 @@ hr {
 
 /* FOOTER */
 .site-footer {
-    padding: .5em .5em 1.5em .5em;
+    padding: .5em .5em 1em .5em;
     background-color: rgb(56, 69, 96);
 }
 

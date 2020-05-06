@@ -137,10 +137,6 @@ h6 {
     color: rgba(124, 141, 178);
 }
 
-#events h3 {
-    margin: .5em 0;
-}
-
 .text-orange {
     color: rgb(225,72,30);
 }
@@ -279,7 +275,7 @@ img {
         transform: translate(-145%,10%);
     }
 
-    .taco { transform: translate(150%,-15%); }
+    .taco { transform: translate(125%,-20%); }
 
     .gyro {
         transform: translate(90%, -10%);
@@ -691,7 +687,10 @@ hr {
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
 }
 
-.events h3 {text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);}
+.events h3 {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05); 
+    margin: .5em 0;
+    }
 
 @media (max-width: 767px ) {
     #events {

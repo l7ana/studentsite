@@ -320,6 +320,12 @@ input[type="submit"] {
     border-bottom: 6px solid rgb(121,196,167);
     background-color: rgb(121,196,167);
     z-index: -1;
+    transition: .25s ease-in-out;
+}
+
+.button:hover::after {
+    transform: translate(-5.5px,-5.5px);
+    transition: .25s ease-in-out;
 }
 
 /* HELPERS */

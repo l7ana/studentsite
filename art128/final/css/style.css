@@ -275,10 +275,10 @@ img {
         transform: translate(-145%,10%);
     }
 
-    .taco { transform: translate(125%,-20%); }
+    .taco { transform: translate(125%,-10%); }
 
     .gyro {
-        transform: translate(90%, -10%);
+        max-width: 200%;
     }
 
 }
@@ -551,7 +551,7 @@ hr {
 }
 
 .site-nav a {
-    display: block;
+    display: inline-block;
     padding:0.5em;
     padding-top: 1em;
 }
@@ -582,7 +582,7 @@ hr {
     .toggle-nav .menu-button {
         position: absolute;
         left: auto;
-        top: 2em;
+        top: 1.75em;
         right: 1em;
     }
     .toggle-nav .site-nav ul li {
@@ -720,7 +720,9 @@ hr {
 .site-footer img {
     max-width: 25px;
     padding-top: 1em;
-    margin: 0 .25em;
 }
 
-.site-footer li {padding: 0 2em}
+.site-footer li {
+    padding: 0 .25em;
+    display: inline-block;
+}

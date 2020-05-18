@@ -53,7 +53,8 @@ header, footer, aside, nav, main, figure, section, article {
 }
 
 body { margin: 0;}
-body {background-image: url(../img/diagonal_pattern.gif);}
+body {
+    background-image: url(../img/diagonal_pattern.gif);}
 
 /* BASE CONTENT */
 
@@ -543,7 +544,7 @@ hr {
     margin: 0;
     padding-top: .5em;
     justify-content: center;
-    /* flex-wrap: wrap; */
+    padding-inline-start: 0;
 }
 
 .site-nav li {
@@ -552,10 +553,8 @@ hr {
 
 .site-nav a {
     display: inline-block;
-    padding:0.5em;
     padding-top: 1em;
 }
-
 
 /* MENU BUTTON */
 .menu-button {
@@ -582,7 +581,7 @@ hr {
     .toggle-nav .menu-button {
         position: absolute;
         left: auto;
-        top: 1.75em;
+        top: 1.5em;
         right: 1em;
     }
     .toggle-nav .site-nav ul li {
@@ -603,9 +602,8 @@ hr {
         display: block;
     }
     .toggle-nav.expanded .site-nav a {
-        /* background: rgba(0,51,102,1); */
-        color: rgba(255,255,255,1);
         margin: .5em 0;
+        width: 100%;
         padding: 1em;
     }
 
@@ -670,6 +668,8 @@ hr {
     margin-right: auto;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
 }
+
+h2 {line-height: 1;}
 
 .hero h2 {
     font-size: 3em;

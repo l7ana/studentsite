@@ -1,0 +1,272 @@
+/* CSS TABLE OF CONTENTS
+---------------------------------
+#GLOBALS
+     #RESET
+     #COLORS
+     #TYPOGRAPHY
+        #BODY
+        #HEADINGS
+        #PARAGRAPHS
+        #LINKS
+        #LISTS
+        #BLOCK QUPTES
+        #HELPERS
+        #MEDIA
+            #IMAGES (Responsive)
+        #COMPONENTS/UI ELEMENTS
+            #BUTTONS
+#BASE LAYOUT
+    #CONTAINER
+     #MEDIAQUERIES
+     #CONTAINER
+     #GRID SYSTEM
+        
+#BASE SITE
+     #SITE HEADER
+        #Site ID
+     #SITE MAIN
+     #SITE FOOTER
+     #SITE NAVIGATION
+    #SECTIONS
+    #SUB PAGES
+--------------------------------- */
+
+/*GLOBAL RESET*/
+body { margin: 0;}
+* {box-sizing: border-box;}
+header, footer, aside, nav, main, figure, section, article {
+    display: block;
+}
+
+/* PAGE FADE IN */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+main,
+fade-in {
+    opacity: 0;
+    animation: fade-in ease-in-out 1;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+}
+
+@keyframes fade-and-move-in {
+    from {
+        transform: translate(0,-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+}
+
+.fade-and-move-in * {
+    opacity: 0;
+    animation: fade-and-move-in ease-out 1;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5;
+}
+
+.fade-and-move-in *:nth-child(1) {
+    animation-duration: 0.1s;
+}
+.fade-and-move-in *:nth-child(2) {
+    animation-duration: 0.2s;
+}
+.fade-and-move-in *:nth-child(3) {
+    animation-duration: 0.4s;
+}
+.fade-and-move-in *:nth-child(4) {
+    animation-duration: 0.7s;
+}
+.fade-and-move-in *:nth-child(5) {
+    animation-duration: 1s;
+}
+.fade-and-move-in *:nth-child(6) {
+    animation-duration: 1.2s;
+}
+.fade-and-move-in *:nth-child(7) {
+    animation-duration: 1.4s;
+}
+.fade-and-move-in *:nth-child(8) {
+    animation-duration: 1.6s;
+}
+.fade-and-move-in *:nth-child(9) {
+    animation-duration: 1.8s;
+}
+
+/* TYPOGRAPHY */
+body {
+    font-family: dinosaur, sans-serif;
+    color: rgba(0,0,0,.7);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1em;
+    font-size: 87.5%; /*14px*/
+    line-height: 1.5em;
+}
+
+h1 {
+    font-size: 3em;
+    color: #63CAE0;}
+
+.site-identity h1 a {
+    color: #63CAE0;
+    font-weight: 700;
+}
+
+/* LINKS */
+a{
+    color: rgba(0,0,0,.4);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a:hover {
+    color: rgba(0,0,0,.6);
+    font-weight: 700;
+}
+
+/* HELPERS */
+.text-centered {text-align: center;}
+
+/* BUTTONS */
+.button {
+    display: inline-block;
+    background-color: #63CAE0;
+    padding: .75em 2em;
+    border-radius: 5px;
+    margin-top: 1em;
+}
+
+.button a {
+    color: white;
+}
+
+/* IMAGES */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* SITE STRUCTURE */
+.site-header,
+.site-footer {
+    text-align: center;
+    padding: 3em 0 2em 0;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+.site-identity h1 {
+    font-size: 2em;
+    margin: 0;
+    font-weight: normal;
+}
+
+.site-nav ul {
+    margin: 0;
+    padding: 2em 0;
+}
+
+.site-nav li {
+    margin: 0em .5em;
+    padding: 0;
+    display: inline-block;
+}
+
+.site-nav a {
+    display: block;
+    padding: 1em .5em;
+    color: rgba(0,0,0,.4);
+}
+
+.site-nav a:hover,
+.site-nav a.selected {
+    color: rgba(0,0,0,.6);
+    border-bottom: 0.05em solid rgba(0,0,0,.2);
+}
+
+section {padding: 0 0 3em 0;}
+
+.contact-form {
+    margin: 0 auto;
+    max-width: 70%;
+}
+
+.info {
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* FULL-WIDTH HELPER */
+
+.full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.full-width img {width: 100%;}
+
+/* HERO SECTIONS */
+.hero {
+    padding: 4em 0;
+    background: #F7F9F8;
+    margin-bottom: 6em;
+}
+
+/* LAYOUT: FLEX GRID */
+@media (min-width: 768px) {
+    .row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1em;
+    }
+    .one-third.column { width: 32%; }
+    .two-thirds.column { width: 60%; }
+}
+
+/* LAYOUT: THUMB GRID */
+.thumbgrid {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.thumbgrid li {
+    list-style: none;
+    width: 49.5%;
+    /* padding-bottom: 0.4%; */
+}
+
+@media (min-width: 768px) {
+    .thumbgrid li {
+        width: 24.5%;
+    }
+}
+
+.thumbgrid a img {
+    filter: brightness(1.05);
+    transition: all ease-in-out 0.2s;
+    border: 1px solid rgba(255,255,255,0);
+}
+
+.thumbgrid a:hover img {
+    filter: brightness(1);
+    border: 1px solid rgba(0,0,0,.3);
+}

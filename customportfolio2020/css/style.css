@@ -37,6 +37,7 @@ body { margin: 0;}
 header, footer, aside, nav, main, figure, section, article {
     display: block;
 }
+body {background-image: url(../img/pattern.png);}
 
 /* PAGE FADE IN */
 @keyframes fade-in {
@@ -141,6 +142,12 @@ a:hover {
 
 /* HELPERS */
 .text-centered {text-align: center;}
+.text-centered p {
+    margin: 0 auto;
+    max-width: 600px;
+    padding-bottom: 1.75em;
+}
+.centered {margin: 0 auto;}
 
 /* BUTTONS */
 .button {
@@ -159,6 +166,10 @@ a:hover {
 img {
     max-width: 100%;
     height: auto;
+}
+
+.site-identity img {
+    max-width: 75px;
 }
 
 .headshot {max-width: 70%;}

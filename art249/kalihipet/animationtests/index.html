@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Tests</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Looping Gifs</h1>
+    <div class="row">
+      <div class="column one-half">
+        <h2>960x675 rgb+alpha, 6fps, 72 dpi</h2>
+       <img src="img/frameani_test_2.gif" alt="">
+      </div>
+      <div class="column one-half">
+        <h2>600x450 rgb+alpha, 6fps, 72 dpi</h2>
+       <img src="img/frameani_test_3.gif" alt="">
+      </div>
+    </div>
+
+    <h1>Play on Hover Gifs</h1>
+    <div class="row">
+      <div class="column-one-half">
+        <h2>960x675 rgb+alpha, 6fps, 72 dpi</h2>
+        <img class="static" src="img/pugTEST_v2_00017.png" alt="">
+        <img class="hover" src="img/frameani_test_2.gif" alt="">
+      </div>
+      <div class="column-one-half">
+        <h2>600x450 rgb+alpha, 6fps, 72 dpi</h2>
+        <img class="static" src="img/pugTEST_v2_00017_small.png" alt="">
+        <img class="hover" src="img/frameani_test_3.gif" alt="">
+      </div>
+    </div>
+
+    <h1>Videos Autoplay and Loop</h1>
+      <video width="600" height="450" autoplay loop muted>
+        <source src="video/pugTEST_v1mini.mp4" type="video/mp4" />
+      </video>
+      <video width="600" height="450" autoplay loop muted>
+        <source src="video/pugTEST_v2mini.mp4" type="video/mp4" />
+      </video>
+</body>
+</html>

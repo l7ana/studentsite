@@ -1,0 +1,110 @@
+// TYPE
+
+body {
+    font-family: $type-body;
+    // max-width: $type-linewidth;
+    font-weight: 200;
+    font-size: 100%;
+    line-height: 1.5;
+    color: $type-color;
+}
+
+h1, h2, h3 {
+    font-family: $type-heading;
+    margin: 0 0 .5em 0;
+    max-width: $type-linewidth;
+    font-weight: 400;
+    color: $type-color;
+}
+
+.blue-type {
+    color: $blue;
+    font-weight: 900;
+}
+
+.turq-type {
+    color: $turq;
+    font-weight: 900;
+}
+
+h4 {
+    font-family: $type-heading;
+    font-weight: 700;
+    color: $blue;
+    font-size: 2em; 
+    text-transform: lowercase; 
+    margin: .25em 0;
+    text-decoration: underline $yellow-dk solid;
+}
+
+h1 {font-size: 6.75em; line-height: 1em;}
+
+h2 {font-size: 4.25em; line-height: 1.1em;}
+
+h3 {font-size: 2.5em; line-height: 1.2em;}
+
+p {
+    margin: 0 0 .5em .25em;
+    max-width: $type-linewidth;
+    font-size: 1em;
+    color: $type-color;
+}
+
+.big-p {
+    margin: 0 0 .5em .25em;
+    max-width: $type-linewidth;
+    font-size: 1.3em;
+}
+
+// Horizontal Rule
+hr {
+    border:0;
+    height: 1px;
+    margin: 3em 0;
+    background: rgba(0,0,0,.1);
+}
+
+.text-centered {
+    text-align: center;
+    * {margin-left: auto; margin-right: auto;}
+}
+
+.subheadline {
+    margin-bottom: 1.5em;
+}
+
+.sectionhead {
+    font-family: $type-body;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: $turq;
+    font-size: 1em;
+    padding: 2em 0 0 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+address {font-style: normal;}
+a {
+    text-decoration: none;
+    color: $blue;
+}
+
+form {margin-top: 2.5em;}
+
+input[type=text] {
+width: 100%;
+padding: 12px 15px;
+margin: 5px 0 10px 0;
+box-sizing: border-box;
+border: 2px solid $yellow;
+border-radius: 30px;
+color: $type-color-lightgrey;
+}
+
+label {
+font-family: $type-heading;
+color: $blue;
+font-weight: 700;
+padding: 0 0 0 10px;
+}

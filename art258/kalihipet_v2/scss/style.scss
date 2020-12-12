@@ -1,0 +1,46 @@
+// VARIABLES
+$color-background: pink;
+$type-body: 'canada-type-gibson', sans-serif;
+$type-heading: 'aesthet-nova', serif;
+$type-linewidth: 45em;
+
+// COLORS
+$type-color: rgba(0,0,0,.8);
+$type-color-darkgrey: rgba(0,0,0,0.75);
+$type-color-lightgrey: rgba(0,0,0,0.5);
+$type-color-links: #2f4193;
+$type-color-links-2: #061766;
+$accent-color: #16AE58;
+$hero-bg-color: #E9F6F0;
+
+$blue: #0488A6;
+$turq: #5BCBBC;
+$yellow: #F2E84B;
+$pink: #FF6E6D;
+$yellow-dk: #D9CF2A;
+$yellow-lt: #fdfac6;
+$yellow-lter: #fffee7;
+$blue-lt: #EFFAF9;
+
+// BREAKPOINT
+$breakpoint-small: 768px;
+$breakpoint-medium: 1050px;
+$breakpoint-large: 1250px;
+
+@import "partials/toc";
+@import "partials/helpers";
+@import "partials/typography";
+@import "partials/sitenav";
+@import "partials/buttons";
+@import "partials/media";
+@import "partials/layout";
+@import "partials/grid";
+@import "partials/structure";
+@import "partials/animations";
+
+
+
+// TEST
+// body {
+//   background: $color-background;
+// }

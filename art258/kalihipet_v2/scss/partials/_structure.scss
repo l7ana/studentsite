@@ -1,0 +1,123 @@
+// SITE STRUCTURE
+.site-header {
+    display: grid;
+    grid-template-columns:1fr auto auto;
+    grid-gap:1em;
+    position: absolute;
+    z-index:10;
+    padding: 0.5em;
+    width: 100%;
+
+    .logo {
+        max-width: 170px;
+        margin: 10px;
+    }
+
+    .site-identity {
+        display: flex;
+        align-items: center;
+        a {color:$blue;}
+        h1 {
+            font-family: $type-heading;
+            font-size: 1.5em;
+            font-weight: normal;
+            line-height: 1;
+            margin: .2em 0 0 0;
+            white-space: nowrap;
+            a {
+                display: block;
+                padding: 0.5em;
+            }
+        }
+    }
+}
+
+// .site-main {overflow-x: hidden;}
+
+.site-footer {
+    background-color: $yellow-lter;
+    padding: 2em 0 1em 0;
+    .container {
+        position: relative;
+        z-index: 10;
+        margin-top: -10%;
+        // overflow-x: hidden;
+        // overflow-y: visible;
+    }
+}
+
+.footer-logo {
+    text-align: center;
+    padding-bottom: 1em;
+    img:first-child {
+        display:block;
+        margin: .5em auto;
+    }
+}
+
+// SECTIONS
+
+section {
+    padding: 1em 0 0 0;
+    align-items: center;
+    position: relative;
+}
+
+.hero {
+    padding: 5em 0;
+    background-image: url(../img/blocks/YellowPath211.svg);
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+}
+
+.mini-top {
+    padding: 5em 0 0 0;
+    background-image: url(../img/blocks/YellowPath211.svg);
+    background-repeat: no-repeat;
+}
+
+
+#section1 {
+    background-image: url(../img/blocks/BluePath214.svg);
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+}
+
+
+#section2 {
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+    padding-top: 10em;
+    margin-bottom: 3em;
+}
+
+@media (min-width: $breakpoint-small + 1) {
+    #section2 {
+    background-image: url(../img/blocks/BluePath215.svg);
+    background-repeat: no-repeat;
+    }
+}
+
+#section3 {
+    background-image: url(../img/blocks/Path53.svg);
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+}
+
+#section4 {
+    background-image: url(../img/blocks/BluePath200.svg);
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+}
+
+#section5 {
+    background-image: url(../img/blocks/BluePath.svg);
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+}

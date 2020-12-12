@@ -1,3 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1679.266" height="735.808" viewBox="0 0 1679.266 735.808">
-  <path id="blue" d="M22.94,1214.077c6.739,1.7-6.09-16.718,0-15.258,662.588,158.812,1032.433-125.857,1605.214,0-.033,126.535,17.224,703.283,12.932,702.67-585.709-213.464-1137.379,104.74-1677.38-97.6C-46.948,1700.37,16.673,1322.89,22.94,1214.077Z" transform="translate(1641.772 1901.49) rotate(180)" fill="#5bcbbc" opacity="0.095"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1679.3 735.8" style="enable-background:new 0 0 1679.3 735.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:9.500000e-02;fill:#5BCBBC;enable-background:new    ;}
+</style>
+<path id="blue" class="st0" d="M1679.3,702.6C1016.7,543.8,572.8,827,0,701.1C0,574.6-3.6-0.6,0.7,0
+	c585.7,213.5,1137.4-104.7,1677.4,97.6C1688.7,201.1,1685.4,704.1,1679.3,702.6z"/>
 </svg>

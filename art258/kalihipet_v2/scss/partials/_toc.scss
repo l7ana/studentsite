@@ -1,0 +1,39 @@
+/* CSS TABLE OF CONTENTS
+---------------------------------
+#GLOBALS
+     #RESET
+     #COLORS
+     #TYPOGRAPHY
+        #BODY
+        #HEADINGS
+        #PARAGRAPHS
+        #LINKS
+        #LISTS
+        #BLOCK QUPTES
+        #HELPERS
+        #MEDIA
+            #IMAGES (Responsive)
+        #COMPONENTS/UI ELEMENTS
+            #BUTTONS
+#BASE LAYOUT
+    #CONTAINER
+     #MEDIAQUERIES
+     #CONTAINER
+     #GRID SYSTEM
+        
+#BASE SITE
+     #SITE HEADER
+        #Site ID
+     #SITE MAIN
+     #SITE FOOTER
+     #SITE NAVIGATION
+    #SECTIONS
+    #SUB PAGES
+--------------------------------- */
+
+/*GLOBAL RESET*/
+body { margin: 0;}
+* {box-sizing: border-box;}
+header, footer, aside, nav, main, figure, section, article {
+    display: block;
+}

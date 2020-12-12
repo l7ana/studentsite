@@ -1,0 +1,78 @@
+// GRID
+
+.row-grid {margin-bottom: 2em;}
+.column-grid {margin-bottom: 3em;}
+
+@media (min-width: $breakpoint-small) {
+    .row-grid {
+        grid-template-columns: repeat(12, 1fr);
+        display: grid;
+        column-gap: 1.45%;
+    }
+
+    .row-grid > .column-grid {
+        // starts
+        &.col-start-1 {grid-column-start: 1;}
+        &.col-start-2 {grid-column-start: 2;}
+        &.col-start-3 {grid-column-start: 3;}
+        &.col-start-4 {grid-column-start: 4;}
+        &.col-start-5 {grid-column-start: 5;}
+        &.col-start-6 {grid-column-start: 6;}
+        &.col-start-7 {grid-column-start: 7;}
+        &.col-start-8 {grid-column-start: 8;}
+        &.col-start-9 {grid-column-start: 9;}
+        &.col-start-10 {grid-column-start: 10;}
+        &.col-start-11 {grid-column-start: 11;}
+        &.col-start-12 {grid-column-start: 12;}
+        // ends
+        &.col-end-2 {grid-column-end: 3;}
+        &.col-end-3 {grid-column-end: 4;}
+        &.col-end-4 {grid-column-end: 5;}
+        &.col-end-5 {grid-column-end: 6;}
+        &.col-end-6 {grid-column-end: 7;}
+        &.col-end-7 {grid-column-end: 8;}
+        &.col-end-8 {grid-column-end: 9;}
+        &.col-end-9 {grid-column-end: 10;}
+        &.col-end-10 {grid-column-end: 11;}
+        &.col-end-11 {grid-column-end: 12;}
+        &.col-end-12 {grid-column-end: 13;}
+        &.shift-up {
+            margin-top: -50%;
+        }
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: left;
+    &.swapped {flex-direction: row-reverse;}
+    &.stacked { flex-direction: column; }
+}
+
+.row > .column {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 100%;
+    margin: 1% 0;
+    padding: 1em;
+    @media (min-width: $breakpoint-small) {
+        &.one-half {width:49%;}
+        &.one-third {width:32.3333%}
+        &.one-fifth {width: 19%;}
+        &.two-thirds {width: 65.6666%;}
+        &.one-fourth {width: 24%;}
+        &.three-fourths {width: 74%;}
+        &.centered {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+.demo .column {
+    background: #ddd;
+    text-align: center;
+    p {max-width: none;}
+}

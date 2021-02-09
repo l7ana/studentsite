@@ -1,23 +1,15 @@
-const swiper = new Swiper('.swiper-container', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
+// get elements
+const body = document.querySelector("body");
+const progressBar = document.querySelector(".progress-bar")
 
-    effect: 'slide',
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  });
+function stretch() {
+  const pixelScrolled = window.scrollY;
+  const viewportHeight = window.innerHeight;
+  const totalHeightScrollabale = body.scrollHeight;
+
+  const pixelsToPercentage = (pixelScrolled / (totalHeightScrollabale - viewportHeight)) * 100;
+
+  progressBar.style.width = Math.round(pixelsToPercentage) + "%";
+}
+
+window.addEventListener('scroll', stretch);

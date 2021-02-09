@@ -51,3 +51,21 @@ body {
   section {
     height: 100vh;
   }
+
+  /* Vanilla JS Progress Bar */
+
+.main-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 8px;
+  width: 100%;
+  background-color: transparent;
+  transition: all .5s ease;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #e00303;
+}

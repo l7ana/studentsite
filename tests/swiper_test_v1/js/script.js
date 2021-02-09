@@ -24,7 +24,6 @@ const swiper = new Swiper('.swiper-container', {
 
   // Progress Indicator
   (function($) { "use strict";
-		
 	$(document).ready(function(){"use strict";
 	
 		//Scroll back to top
